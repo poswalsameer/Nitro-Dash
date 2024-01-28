@@ -57,6 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\trackMovement.cs" />
+    <Compile Include="Assets\Scripts\carControls.cs" />
+    <Compile Include="Assets\Scripts\grassMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Backyard - Free\Readme.txt" />
