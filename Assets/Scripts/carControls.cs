@@ -10,6 +10,25 @@ public class carControls : MonoBehaviour
     public float maxRightPosition = 1.35f;
     public float maxLeftPosition = -1.4f;
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "EnemyFrontCar")
+        {
+            Destroy(gameObject);
+        }
+
+        if( collision.gameObject.tag == "EnemyOppositeCar")
+        {
+            Destroy(gameObject);
+        }
+
+        if( collision.gameObject.tag == "Border")
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -33,8 +52,9 @@ public class carControls : MonoBehaviour
             transform.position = new Vector3(currentPosition.x + controlSpeed, currentPosition.y, 0);
             
         }
-    }
 
+    }
+    
         
     
 }

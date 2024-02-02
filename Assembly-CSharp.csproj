@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\trackMovement.cs" />
     <Compile Include="Assets\Scripts\CarSpawnScript.cs" />
     <Compile Include="Assets\Scripts\FrontCarSpawnScript.cs" />
+    <Compile Include="Assets\Scripts\EnemyDestroyer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Backyard - Free\Readme.txt" />
