@@ -63,8 +63,8 @@
     <Compile Include="Assets\Scripts\enemyCarMovement.cs" />
     <Compile Include="Assets\Scripts\grassMovement.cs" />
     <Compile Include="Assets\Scripts\trackMovement.cs" />
-    <Compile Include="Assets\Scripts\GamePlayUIManagerScript.cs" />
     <Compile Include="Assets\Scripts\MainMenuUIManager.cs" />
+    <Compile Include="Assets\Scripts\GamePlayUIManagerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Backyard - Free\Readme.txt" />

@@ -526,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348.8, y: 801.7}
+  m_AnchoredPosition: {x: -318.1, y: 599}
   m_SizeDelta: {x: 306, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554579693
@@ -573,9 +573,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2004385077}
-        m_TargetAssemblyTypeName: GamePlayUIManagerScript, Assembly-CSharp
-        m_MethodName: pauseButtonClicked
+      - m_Target: {fileID: 2004385078}
+        m_TargetAssemblyTypeName: enemyCarMovement, Assembly-CSharp
+        m_MethodName: pauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1096,9 +1096,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2004385077}
-        m_TargetAssemblyTypeName: GamePlayUIManagerScript, Assembly-CSharp
-        m_MethodName: resumeButtonClicked
+      - m_Target: {fileID: 2004385078}
+        m_TargetAssemblyTypeName: enemyCarMovement, Assembly-CSharp
+        m_MethodName: resumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1331,7 +1331,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1555155258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2004385077}
+        m_TargetAssemblyTypeName: GamePlayUIManagerScript, Assembly-CSharp
+        m_MethodName: menuButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1555155258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,6 +2062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004385076}
   - component: {fileID: 2004385077}
+  - component: {fileID: 2004385078}
   m_Layer: 0
   m_Name: GamePlayUIManager
   m_TagString: Untagged
@@ -2087,6 +2100,20 @@ MonoBehaviour:
   resumeButton: {fileID: 967858306}
   menuButton: {fileID: 1555155255}
   pauseText: {fileID: 398282427}
+--- !u!114 &2004385078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004385075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e0ac3621b5a974e829855bcd279a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 1
+  gamePlayUIManagerScript: {fileID: 2004385077}
 --- !u!1 &2108795911
 GameObject:
   m_ObjectHideFlags: 0

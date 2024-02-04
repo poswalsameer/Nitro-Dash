@@ -24,7 +24,9 @@ public class FrontCarSpawnScript : MonoBehaviour
         {
             Vector3 frontCarPosition = new Vector3(Random.Range(-1.4f, -0.4f), transform.position.y, transform.position.z);
             carNumber = Random.Range(0, 2);
-            Instantiate(frontCar[carNumber], frontCarPosition, transform.rotation);
+
+             Instantiate(frontCar[carNumber], frontCarPosition, transform.rotation);
+            
             timer = delayInCar;
         }
     }
