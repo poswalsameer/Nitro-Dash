@@ -10,24 +10,31 @@ public class carControls : MonoBehaviour
     public float maxRightPosition = 1.35f;
     public float maxLeftPosition = -1.4f;
 
+    public GamePlayUIManagerScript gamePlayUIManagerScript;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "EnemyFrontCar")
         {
+            gamePlayUIManagerScript.isGameOver = true;
             Destroy(gameObject);
+            gamePlayUIManagerScript.gameOver();
         }
 
         if( collision.gameObject.tag == "EnemyOppositeCar")
         {
+            gamePlayUIManagerScript.isGameOver = true;
             Destroy(gameObject);
+            gamePlayUIManagerScript.gameOver();
         }
 
         if( collision.gameObject.tag == "Border")
         {
+            gamePlayUIManagerScript.isGameOver = true;
             Destroy(gameObject);
+            gamePlayUIManagerScript.gameOver();
         }
-    }
+    } 
 
     private void FixedUpdate()
     {

@@ -6,6 +6,7 @@ public class enemyCarMovement : MonoBehaviour
 {
     public float enemySpeed = 1f;
     public GamePlayUIManagerScript gamePlayUIManagerScript;
+    
     // Start is called before the first frame update
 
     void Start()
@@ -35,4 +36,25 @@ public class enemyCarMovement : MonoBehaviour
         gamePlayUIManagerScript.resumeButtonClicked();
         enemySpeed = 0.03f;
     }
+
+    /* private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyFrontCar")
+        {
+            Time.timeScale = 0f;
+            enemySpeed = 0f;
+        }
+
+        if (collision.gameObject.tag == "EnemyOppositeCar")
+        {
+            Time.timeScale = 0f;
+            enemySpeed = 0f;
+        }
+
+        if (collision.gameObject.tag == "Border")
+        {
+            Time.timeScale = 0f;
+            
+        }
+    } */
 }
