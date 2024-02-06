@@ -144,4 +144,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0ac3621b5a974e829855bcd279a94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 0.03
+  enemySpeed: 0.04
+  gamePlayUIManagerScript: {fileID: 0}

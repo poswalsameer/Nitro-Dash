@@ -16,6 +16,8 @@ public class GamePlayUIManagerScript : MonoBehaviour
     public Text scoreText;
     public Text yourScoreText;
     public Text finalScore;
+    public AudioSource carAudio;
+    public AudioSource crashSound;
 
     private int score;
     public bool isGameOver;
@@ -65,6 +67,7 @@ public class GamePlayUIManagerScript : MonoBehaviour
 
     public void gameOver()
     {
+        carAudio.Pause();    
         pauseButton.SetActive(false);
         playButton.SetActive(true);    
         resumeButton.SetActive(false);
@@ -86,6 +89,7 @@ public class GamePlayUIManagerScript : MonoBehaviour
 
     public void pauseButtonClicked()
     {
+        carAudio.Pause();
         pauseButton.SetActive(false);
         playButton.SetActive(false);
         resumeButton.SetActive(true);
@@ -101,7 +105,8 @@ public class GamePlayUIManagerScript : MonoBehaviour
     public void resumeButtonClicked()
     {
 
-        
+
+            carAudio.Play();
             pauseButton.SetActive(true);
             playButton.SetActive(false);
             resumeButton.SetActive(false);

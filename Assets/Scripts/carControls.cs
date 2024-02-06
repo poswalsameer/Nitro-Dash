@@ -19,6 +19,7 @@ public class carControls : MonoBehaviour
             gamePlayUIManagerScript.isGameOver = true;
             Destroy(gameObject);
             gamePlayUIManagerScript.gameOver();
+            gamePlayUIManagerScript.crashSound.Play();
         }
 
         if( collision.gameObject.tag == "EnemyOppositeCar")
@@ -26,6 +27,7 @@ public class carControls : MonoBehaviour
             gamePlayUIManagerScript.isGameOver = true;
             Destroy(gameObject);
             gamePlayUIManagerScript.gameOver();
+            gamePlayUIManagerScript.crashSound.Play();
         }
 
         if( collision.gameObject.tag == "Border")
@@ -33,6 +35,7 @@ public class carControls : MonoBehaviour
             gamePlayUIManagerScript.isGameOver = true;
             Destroy(gameObject);
             gamePlayUIManagerScript.gameOver();
+            gamePlayUIManagerScript.crashSound.Play();
         }
     } 
 

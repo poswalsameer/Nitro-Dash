@@ -67,8 +67,12 @@
     <Compile Include="Assets\Scripts\GamePlayUIManagerScript.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Car Engine Sound - i6 German Free\Documentation\Read Me.txt" />
+    <None Include="Assets\Car Engine Sound - i6 German Free\Assets\Audio\Read Me.txt" />
     <None Include="Assets\Backyard - Free\Readme.txt" />
+    <None Include="Assets\Fonts\pizzadudedotdk.txt" />
     <None Include="Assets\Fonts\readme.txt" />
+    <None Include="Assets\Track Day - Racing Soundtrack\_Track_Day_Read Me!.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
