@@ -41,18 +41,42 @@ public class carControls : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            // Check if the touch is on the left half of the screen
+            if (touch.position.x < Screen.width / 2)
+            {
+                // Move the car left
+                currentPosition.x = currentPosition.x - controlSpeed;
+                transform.position = new Vector3(currentPosition.x - controlSpeed, currentPosition.y, 0);
+            }
+            // Check if the touch is on the right half of the screen
+            else if (touch.position.x >= Screen.width / 2)
+            {
+                // Move the car right
+                currentPosition.x = currentPosition.x + controlSpeed;
+                transform.position = new Vector3(currentPosition.x + controlSpeed, currentPosition.y, 0);
+            }
+        }
+
+
+
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             //currentPosition.x += -controlSpeed;
             currentPosition.x = currentPosition.x - controlSpeed;
 
             //currentPosition.x = Mathf.Clamp(currentPosition.x, maxLeftPosition, maxRightPosition);
-           
+
             transform.position = new Vector3(currentPosition.x - controlSpeed, currentPosition.y, 0);
-            
+
 
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) )
         {
             //currentPosition.x += controlSpeed;
             currentPosition.x = currentPosition.x + controlSpeed;
